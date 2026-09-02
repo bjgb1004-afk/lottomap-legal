@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 삭제 요청 - 복권명당</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 { font-size: 28px; margin-bottom: 10px; color: #1a1a1a; }
+        .meta { font-size: 14px; color: #666; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        h2 { font-size: 18px; margin-top: 30px; margin-bottom: 15px; color: #1a1a1a; padding-bottom: 10px; border-bottom: 2px solid #007AFF; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; line-height: 1.5; }
+        strong { color: #1a1a1a; }
+        .highlight { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+        th { background: #f8f9fa; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #1e1e1e; color: #e0e0e0; }
+            .container { background: #2d2d2d; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            h1, h2 { color: #e0e0e0; }
+            .meta { color: #999; border-bottom-color: #444; }
+            h2 { border-bottom-color: #0a84ff; }
+            .highlight { background: #3d3d00; color: #e0e0e0; border-left-color: #ffb800; }
+            th { background: #383838; }
+            th, td { border-bottom-color: #444; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>데이터 삭제 요청</h1>
+        <div class="meta">
+            <strong>복권명당 (로또 명당 추천 서비스)</strong><br>
+            최종 수정일: 2026년 9월 2일
+        </div>
+
+        <h2>1. 삭제 요청 방법</h2>
+        <p>복권명당을 이용하며 생성된 개인 데이터의 삭제를 원하시면 아래 이메일로 요청해 주세요.</p>
+        <div class="highlight">
+            <strong>📧 요청 이메일:</strong> bjgb1004@gmail.com<br>
+            <strong>제목:</strong> [데이터 삭제 요청] + 가입 시 사용한 이메일 주소<br>
+            <strong>처리 기한:</strong> 요청 접수 후 영업일 기준 7일 이내 처리
+        </div>
+
+        <h2>2. 삭제 절차</h2>
+        <ol>
+            <li>위 이메일로 삭제를 요청하시면, 본인 확인을 위해 가입 시 사용한 이메일 주소를 회신 요청드릴 수 있습니다.</li>
+            <li>본인 확인이 완료되면 아래 표에 명시된 데이터를 순차적으로 삭제합니다.</li>
+            <li>삭제가 완료되면 이메일로 완료 안내를 드립니다.</li>
+        </ol>
+        <p>앱을 기기에서 삭제(제거)하시면 즐겨찾기 등 <strong>기기에 저장된 데이터는 즉시 삭제</strong>됩니다. 다만 서버에 저장된 데이터(계정 정보 등)는 별도로 위 이메일 요청이 필요합니다.</p>
+
+        <h2>3. 삭제 또는 보관되는 데이터 유형</h2>
+        <table>
+            <tr><th>데이터 유형</th><th>삭제 요청 시 처리</th><th>비고</th></tr>
+            <tr><td>이메일 주소 / 계정 정보</td><td>즉시 삭제</td><td>선택 가입 시에만 수집됨</td></tr>
+            <tr><td>즐겨찾기 목록</td><td>즉시 삭제</td><td>기기 로컬 저장 (앱 삭제 시 자동 삭제)</td></tr>
+            <tr><td>위치 정보</td><td>해당 없음</td><td>실시간 처리만 하며 서버에 저장하지 않음</td></tr>
+            <tr><td>앱 사용 통계(검색기록, 클릭 등)</td><td>삭제 요청 가능</td><td>미요청 시 수집일로부터 30일 후 자동 삭제 (PostHog)</td></tr>
+            <tr><td>오류/충돌 로그</td><td>삭제 요청 가능</td><td>미요청 시 수집일로부터 90일 후 자동 삭제 (Sentry)</td></tr>
+        </table>
+
+        <p>자세한 수집 항목 및 처리 방침은 <a href="./privacy-policy.html">개인정보처리방침</a>을 참고해 주세요.</p>
+
+        <h2>4. 문의</h2>
+        <p>데이터 삭제 관련 문의사항이 있으시면 <strong>bjgb1004@gmail.com</strong>으로 연락해 주세요.</p>
+
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; text-align: center;">
+            <p>© 2026 복권명당. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
